@@ -10,7 +10,8 @@
 
     <color name="myblue">#603CFF</color>
     <color name="myred">#FF6767</color>
-    <color name="myyello">#E1BF5A</color>
-    <color name="unable">#FFEB3B</color>
+    <color name="unable">#E1BF5A</color>
+    <color name="myyello">#FFEB3B</color>
+    <color name="mygray">#423F3F</color>
 
 </resources>

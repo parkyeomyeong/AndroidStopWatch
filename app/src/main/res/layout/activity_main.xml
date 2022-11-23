@@ -37,27 +37,43 @@
         app:layout_constraintStart_toEndOf="@+id/tv_second"
         tools:ignore="MissingConstraints" />
 
-    <LinearLayout
-        android:id="@+id/record_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tv_miute"
-        app:layout_constraintBottom_toTopOf="@id/btn_start"
-        app:layout_constraintStart_toStartOf="parent"
+    <ScrollView
+        android:id="@+id/myscroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_start"
         app:layout_constraintEnd_toEndOf="parent"
-        android:orientation="vertical" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_miute"
+        app:layout_constraintVertical_bias="0.424">
+
+        <LinearLayout
+            android:id="@+id/record_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/btn_start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_miute" />
+
+    </ScrollView>
+
     <Button
         android:id="@+id/btn_refreshandrecord"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/myyello"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/unable"
+        android:enabled="false"
         android:padding="20dp"
         android:text="@string/record"
-        android:textColor="@color/unable"
+        android:textColor="@color/myyello"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginBottom="50dp"
-        android:enabled="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_start"
         app:layout_constraintHorizontal_bias="0.5"
@@ -67,13 +83,13 @@
         android:id="@+id/btn_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="@color/myblue"
         android:padding="20dp"
         android:text="@string/start"
         android:textColor="@color/white"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:layout_marginBottom="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
